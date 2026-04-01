@@ -45,3 +45,8 @@ Found an issue or have suggestions? Please open an issue or submit a pull reques
 ## License
 
 These styles are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+
+## Developed by
+
+Developed by [Rafael Dias Campos](https://orcid.org/0000-0001-7750-0757) as a personal contribution to [UFTM University Press](https://editora.uftm.edu.br/).\
+

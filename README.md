@@ -20,20 +20,12 @@ Author-date citation style for UFTM Editora publications.
 - **License:** CC BY-NC-SA 4.0
 
 ### FCSH-UNL History Department
-Historical reference style for FCSH-UNL (School of Social Sciences, New University of Lisbon) history department publications.
+Historical reference style for FCSH-UNL (School of Social Sciences, New University of Lisbon) history department publications was the base of this CSL style.
 
 - **Format:** Note-based citations
 - **Language:** Portuguese
 - **License:** CC BY-NC-SA 4.0
 
-## What is CSL?
-
-[Citation Style Language (CSL)](https://citationstyles.org/) is an open XML-based standard for specifying citation and bibliography formatting. CSL styles are used by reference management software such as:
-
-- [Zotero](https://www.zotero.org/)
-- [Mendeley](https://www.mendeley.com/)
-- [Papers](https://www.papersapp.com/)
-- [Pandoc](https://pandoc.org/)
 
 ## Installation
 
@@ -41,13 +33,6 @@ Historical reference style for FCSH-UNL (School of Social Sciences, New Universi
 1. Download the `.csl` file
 2. In Zotero, go to **Edit → Preferences → Cite → Styles**
 3. Click the "+" button and select the downloaded file
-
-### Pandoc
-Place the `.csl` file in your working directory or in `~/.pandoc/csl/` and reference it:
-
-```bash
-pandoc --csl=style-name.csl -o output.pdf input.md
-```
 
 ## Documentation
 

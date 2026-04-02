@@ -51,3 +51,6 @@ These styles are licensed under the [Creative Commons Attribution-NonCommercial-
 Developed by [Rafael Dias Campos](https://orcid.org/0000-0001-7750-0757) as a personal contribution to [UFTM University Press](https://editora.uftm.edu.br/).
 
 [![Developed by Rafael Dias Campos for UFTM](https://img.shields.io/badge/Developed%20by-Rafael%20Dias%20Campos%20for%20UFTM-A71930?style=for-the-badge&labelColor=000000&logoColor=white)](https://editora.uftm.edu.br)
+
+[![Developed by Rafael Dias Campos](https://img.shields.io/badge/Developed%20by-Rafael%20Dias%20Campos-A71930?style=for-the-badge&labelColor=000000&logoColor=white)](https://editora.uftm.edu.br) [![FOR](https://img.shields.io/badge/FOR-ffffff?style=for-the-badge&labelColor=ffffff&color=ffffff&logoColor=000000)](https://editora.uftm.edu.br) [![Editora UFTM](https://img.shields.io/badge/Editora%20UFTM-A71930?style=for-the-badge&labelColor=000000&logoColor=white)](https://editora.uftm.edu.br)
+

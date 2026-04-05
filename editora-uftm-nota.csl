@@ -506,68 +506,6 @@
       </if>
     </choose>
   </macro>
-  <macro name="locators-note-join-with-space">
-    <choose>
-      <if type="article-journal" variable="volume" match="all">
-        <choose>
-          <if match="none" variable="collection-title">
-            <text macro="locators-note" />
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-note-join-with-comma">
-    <choose>
-      <if type="article-journal" match="none">
-        <text macro="locators-note" />
-      </if>
-      <else-if type="article-journal">
-        <choose>
-          <if variable="volume" match="none">
-            <text macro="locators-note" />
-          </if>
-          <else-if match="any" variable="collection-title">
-            <text macro="locators-note" />
-          </else-if>
-        </choose>
-      </else-if>
-    </choose>
-  </macro>
-  <macro name="locators-note">
-    <choose>
-      <if type="article-journal">
-        <group delimiter=", ">
-          <text macro="collection-title-journal" />
-          <text variable="volume" />
-          <group delimiter=" ">
-            <text term="issue" form="short" />
-            <text variable="issue" />
-          </group>
-        </group>
-      </if>
-      <else-if type="bill legislation legal_case" match="any">
-        <text macro="legal-cites" />
-      </else-if>
-      <else-if type="book chapter graphic motion_picture paper-conference report song" match="any">
-        <group delimiter=", ">
-          <text macro="edition-note" />
-          <group delimiter=" ">
-            <text term="volume" form="short" />
-            <number variable="volume" form="numeric" />
-          </group>
-          <choose>
-            <if variable="locator" match="none">
-              <group delimiter=" ">
-                <number variable="number-of-volumes" form="numeric" />
-                <text term="volume" form="short" plural="true" />
-              </group>
-            </if>
-          </choose>
-        </group>
-      </else-if>
-    </choose>
-  </macro>
   <macro name="legal-cites">
     <choose>
       <if type="legal_case" match="any">
@@ -614,41 +552,6 @@
           </choose>
         </group>
       </else-if>
-    </choose>
-  </macro>
-  <macro name="locators-join-with-space">
-    <choose>
-      <if type="article-journal" variable="volume" match="all">
-        <choose>
-          <if match="none" variable="collection-title">
-            <text macro="locators" />
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-join-with-comma">
-    <choose>
-      <if type="bill chapter legislation legal_case paper-conference" match="any">
-        <text macro="locators" />
-      </if>
-      <else-if type="article-journal">
-        <choose>
-          <if variable="volume" match="none">
-            <text macro="locators" />
-          </if>
-          <else-if match="any" variable="collection-title">
-            <text macro="locators" />
-          </else-if>
-        </choose>
-      </else-if>
-    </choose>
-  </macro>
-  <macro name="locators-join-with-period">
-    <choose>
-      <if type="bill legislation legal_case article-journal chapter paper-conference" match="none">
-        <text macro="locators" />
-      </if>
     </choose>
   </macro>
   <macro name="locators">

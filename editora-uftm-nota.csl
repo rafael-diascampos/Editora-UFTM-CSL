@@ -936,36 +936,14 @@
       </else-if>
     </choose>
   </macro>
-  <macro name="point-locators">
+  <macro name="point-locator-inline">
     <choose>
-      <if variable="locator" match="none">
-        <choose>
-          <if type="article-journal chapter paper-conference" match="any">
-            <text variable="page" />
-          </if>
-        </choose>
+      <if variable="locator">
+        <group delimiter=" " prefix=", ">
+          <label variable="locator" form="short" />
+          <text variable="locator" />
+        </group>
       </if>
-      <else-if type="article-journal">
-        <group delimiter=" ">
-          <choose>
-            <if locator="page" match="none">
-              <label variable="locator" form="short" suffix=" " />
-            </if>
-          </choose>
-          <text variable="locator" />
-        </group>
-      </else-if>
-      <else-if type="legal_case" />
-      <else>
-        <group delimiter=" ">
-          <choose>
-            <if locator="page" match="none">
-              <label variable="locator" form="short" />
-            </if>
-          </choose>
-          <text variable="locator" />
-        </group>
-      </else>
     </choose>
   </macro>
   <macro name="locators-chapter">
@@ -1462,53 +1440,12 @@
   <!-- Citação-->
   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-names="true">
     <layout suffix="." delimiter="; ">
-      <choose>
-        <if position="ibid ibid-with-locator" match="any">
-          <group delimiter=", ">
-            <text macro="contributors-citation" />
-            <group delimiter=" ">
-              <group delimiter=", ">
-                <choose>
-                  <if variable="author editor translator" match="none">
-                    <text macro="title-short" />
-                  </if>
-                </choose>
-                <text macro="case-locator-subsequent" />
-              </group>
-              <text macro="case-pinpoint-subsequent" />
-            </group>
-            <choose>
-              <if match="none" type="legal_case">
-                <text macro="point-locators-subsequent" />
-              </if>
-            </choose>
-            <group>
-              <text macro="data-ano-basico" />
-            </group>
-          </group>
-        </if>
-        <else>
-          <group delimiter=", ">
-            <text macro="contributors-citation" />
-            <group delimiter=" ">
-              <group delimiter=", ">
-                <text macro="title-short" />
-                <text macro="date-disambiguate" />
-                <text macro="case-locator-subsequent" />
-              </group>
-              <text macro="case-pinpoint-subsequent" />
-            </group>
-            <choose>
-              <if match="none" type="legal_case">
-                <text macro="point-locators-subsequent" />
-              </if>
-            </choose>
-            <group>
-              <text macro="data-ano-basico" />
-            </group>
-          </group>
-        </else>
-      </choose>
+      <group delimiter=", ">
+        <text macro="contributors-citation" />
+        <text macro="title-short" />
+        <text macro="data-ano-basico" />
+        <text macro="point-locator-inline" />
+      </group>
     </layout>
   </citation>
   <!-- Bibliografia-->

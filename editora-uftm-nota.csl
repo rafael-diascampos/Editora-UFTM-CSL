@@ -2008,18 +2008,18 @@
               </choose>
               <group>
                 <choose>
-                  <else-if match="any" variable="publisher-place">
+                  <if match="any" variable="publisher-place">
                     <text variable="publisher-place" prefix=", " />
-                  </else-if>
+                  </if>
                 </choose>
               </group>
               <group>
                 <choose>
-                  <else-if match="any" variable="dimensions">
+                  <if match="any" variable="dimensions">
                     <text variable="medium" font-style="normal" prefix=", " />
                     <text variable="dimensions" prefix=", " />
                     <text variable="collection-title" />
-                  </else-if>
+                  </if>
                 </choose>
               </group>
             </group>

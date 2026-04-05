@@ -189,6 +189,20 @@
       <text macro="recipient-note" />
     </group>
   </macro>
+  <macro name="contributors-citation">
+    <names variable="author">
+      <name and="text" delimiter=", " delimiter-precedes-last="always" />
+      <substitute>
+        <text macro="editor" />
+        <text macro="translator" />
+        <choose>
+          <if type="article-magazine article-newspaper webpage post-weblog" match="any">
+            <text variable="container-title" />
+          </if>
+        </choose>
+      </substitute>
+    </names>
+  </macro>
   <macro name="contributors">
     <group delimiter=". ">
       <names variable="author">
@@ -1312,16 +1326,23 @@
   </macro>
   <macro name="data-ano-basico">
     <choose>
+      <!-- Datas CERTAS -->
       <if match="any" variable="issued">
-        <date date-parts="year" form="text" variable="issued">
-          <date-part name="year" />
-        </date>
+        <if match="none" is-uncertain-date="issued">
+          <date date-parts="year" form="text" variable="issued">
+            <date-part name="year" />
+          </date>
+        </if>
       </if>
+      <!-- Datas INCERTAS (entre colchetes) -->
       <else-if match="any" is-uncertain-date="issued">
-        <date date-parts="year" form="text" variable="issued">
-          <date-part name="year" />
-        </date>
+        <group prefix="[" suffix="]">
+          <date date-parts="year" form="text" variable="issued">
+            <date-part name="year" />
+          </date>
+        </group>
       </else-if>
+      <!-- Sem data -->
       <else>
         <text term="no date" form="short" />
       </else>
@@ -1379,7 +1400,7 @@
   <macro name="data-ano-completo">
     <choose>
       <if match="any" variable="issued">
-        <date date-parts="year-month" form="text" variable="issued">
+        <date date-parts="year-month-day" form="text" variable="issued">
           <date-part name="day" />
           <date-part name="month" form="short" text-case="lowercase" />
           <date-part name="year" />
@@ -1430,12 +1451,13 @@
       </group>
     </group>
   </macro>
+  <!-- Citação-->
   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-names="true">
     <layout suffix="." delimiter="; ">
       <choose>
         <if position="ibid ibid-with-locator" match="any">
           <group delimiter=", ">
-            <text macro="contributors-short" />
+            <text macro="contributors-citation" />
             <group delimiter=" ">
               <group delimiter=", ">
                 <choose>
@@ -1452,14 +1474,14 @@
                 <text macro="point-locators-subsequent" />
               </if>
             </choose>
-          </group>
-          <group>
-            <text macro="data-ano-basico" />
+            <group>
+              <text macro="data-ano-basico" />
+            </group>
           </group>
         </if>
         <else>
           <group delimiter=", ">
-            <text macro="contributors-short" />
+            <text macro="contributors-citation" />
             <group delimiter=" ">
               <group delimiter=", ">
                 <text macro="title-short" />
@@ -1473,14 +1495,13 @@
                 <text macro="point-locators-subsequent" />
               </if>
             </choose>
-            <group delimiter=" ">
-              <date date-parts="year" form="text" variable="issued" />
-            </group>
+            <date date-parts="year" form="text" variable="issued" />
           </group>
         </else>
       </choose>
     </layout>
   </citation>
+  <!-- Bibliografia-->
   <bibliography et-al-min="3" et-al-use-first="1" entry-spacing="2">
     <sort>
       <key variable="author" />

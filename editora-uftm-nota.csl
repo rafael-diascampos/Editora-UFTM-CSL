@@ -1238,7 +1238,6 @@
       </else-if>
     </choose>
   </macro>
-          </names>
   <macro name="bibliography-name">
     <group>
       <names variable="author editor">

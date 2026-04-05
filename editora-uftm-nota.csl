@@ -1331,7 +1331,7 @@
       <choose>
         <if type="book">
           <group delimiter=". ">
-            <text macro="nome-base" />
+            <text macro="bibliography-name" />
             <group delimiter=". ">
               <text variable="title" font-style="italic" />
               <choose>
@@ -1399,7 +1399,7 @@
         <else-if type="speech">
           <group delimiter=". ">
             <group>
-              <text macro="nome-sem-anonimo" />
+              <text macro="bibliography-name" />
             </group>
             <group delimiter=", ">
               <text variable="title" />
@@ -1421,7 +1421,7 @@
         <else-if type="article-newspaper">
           <group delimiter=". ">
             <group>
-              <text macro="nome-sem-anonimo" />
+              <text macro="bibliography-name" />
             </group>
             <group>
               <text variable="title" suffix=". " />
@@ -1447,7 +1447,7 @@
             <group>
               <choose>
                 <if match="any" variable="author">
-                  <text macro="nome-base" />
+                  <text macro="bibliography-name" />
                 </if>
                 <else>
                   <text term="anonymous" />
@@ -1515,7 +1515,7 @@
         </else-if>
         <else-if type="personal_communication">
           <group>
-            <text macro="nome-base" />
+            <text macro="bibliography-name" />
           </group>
           <group delimiter=". " prefix=". ">
             <text variable="title" font-style="italic" />
@@ -1924,7 +1924,7 @@
             <else>
               <group delimiter=". ">
                 <group>
-                  <text macro="nome-sem-anonimo" />
+                  <text macro="bibliography-name" />
                 </group>
                 <group>
                   <text variable="title" font-style="italic" />
@@ -1954,7 +1954,7 @@
         <else-if type="manuscript document" match="any">
           <group delimiter=". ">
             <group>
-              <text macro="nome-sem-anonimo" />
+              <text macro="bibliography-name" />
             </group>
             <group>
               <text variable="title" font-style="italic" font-variant="normal" />
@@ -1980,7 +1980,7 @@
         <else>
           <group delimiter=". ">
             <group>
-              <text macro="nome-sem-anonimo" />
+              <text macro="bibliography-name" />
             </group>
             <group delimiter=", ">
               <text variable="title" />

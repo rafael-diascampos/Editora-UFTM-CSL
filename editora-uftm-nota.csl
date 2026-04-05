@@ -554,65 +554,6 @@
       </else-if>
     </choose>
   </macro>
-  <macro name="locators">
-    <choose>
-      <if type="article-journal">
-        <group delimiter=", ">
-          <text macro="collection-title-journal" />
-          <text variable="volume" />
-          <group delimiter=" ">
-            <text term="issue" form="short" />
-            <text variable="issue" />
-          </group>
-        </group>
-      </if>
-      <else-if type="bill legislation legal_case" match="any">
-        <text macro="legal-cites" />
-      </else-if>
-      <else-if type="book graphic motion_picture report song" match="any">
-        <group delimiter=". ">
-          <text macro="edition" />
-          <group delimiter=" ">
-            <text term="volume" form="short" text-case="capitalize-first" />
-            <number variable="volume" form="numeric" />
-          </group>
-          <group delimiter=" ">
-            <number variable="number-of-volumes" form="numeric" />
-            <text term="volume" form="short" plural="true" />
-          </group>
-        </group>
-      </else-if>
-      <else-if type="chapter entry-dictionary entry-encyclopedia paper-conference" match="any">
-        <group delimiter=". ">
-          <text macro="edition" />
-          <choose>
-            <if variable="page" match="none">
-              <group delimiter=" ">
-                <text term="volume" form="short" text-case="capitalize-first" />
-                <number variable="volume" form="numeric" />
-              </group>
-            </if>
-          </choose>
-        </group>
-      </else-if>
-    </choose>
-  </macro>
-  <macro name="locators-newspaper">
-    <choose>
-      <if type="article-newspaper">
-        <group delimiter=", ">
-          <group delimiter=" ">
-            <number variable="edition" />
-            <text term="edition" />
-          </group>
-          <group delimiter=" ">
-            <text term="section" form="short" />
-            <text variable="section" />
-          </group>
-        </group>
-      </if>
-    </choose>
-  </macro>
   <macro name="event-note">
     <text variable="event" />
   </macro>
@@ -762,45 +703,6 @@
           <label variable="locator" form="short" />
           <text variable="locator" />
         </group>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-chapter">
-    <choose>
-      <if type="chapter entry-dictionary entry-encyclopedia paper-conference" match="any">
-        <choose>
-          <if variable="author container-author" match="all" />
-          <else>
-            <choose>
-              <if variable="page">
-                <text variable="volume" suffix=":" />
-                <text variable="page" />
-              </if>
-            </choose>
-          </else>
-        </choose>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-journal-join-with-colon">
-    <choose>
-      <if type="article-journal">
-        <choose>
-          <if variable="volume issue" match="any">
-            <text variable="page" />
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-journal-join-with-comma">
-    <choose>
-      <if type="article-journal">
-        <choose>
-          <if variable="volume issue" match="none">
-            <text variable="page" />
-          </if>
-        </choose>
       </if>
     </choose>
   </macro>

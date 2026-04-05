@@ -939,7 +939,7 @@
   <macro name="point-locator-inline">
     <choose>
       <if variable="locator">
-        <group delimiter=" " prefix=", ">
+        <group delimiter=" " prefix="">
           <label variable="locator" form="short" />
           <text variable="locator" />
         </group>

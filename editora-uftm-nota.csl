@@ -145,7 +145,7 @@
       <label form="verb-short" prefix=", " />
     </names>
   </macro>
-  <macro name="recipient">
+  <macro name="destinatario-entrevistador">
     <group delimiter=" ">
       <choose>
         <if type="personal_communication">
@@ -159,7 +159,7 @@
           </choose>
         </if>
       </choose>
-      <text macro="recipient-note" />
+      <text macro="recipient-interviewer" />
     </group>
   </macro>
   <macro name="contributors-citation">
@@ -289,35 +289,6 @@
         <text macro="issued" />
       </if>
     </choose>
-  </macro>
-  <macro name="description">
-    <group delimiter=", ">
-      <group delimiter=". ">
-        <text macro="interviewer" />
-        <text variable="medium" text-case="capitalize-first" />
-      </group>
-      <choose>
-        <if variable="title" match="none" />
-        <else-if type="thesis speech" match="any" />
-        <else-if type="patent">
-          <group delimiter=" ">
-            <text variable="authority" />
-            <text variable="number" />
-          </group>
-        </else-if>
-        <else>
-          <text variable="genre" text-case="capitalize-first" />
-        </else>
-      </choose>
-      <choose>
-        <if type="map">
-          <text variable="scale" />
-        </if>
-        <else-if type="graphic">
-          <text variable="dimensions" />
-        </else-if>
-      </choose>
-    </group>
   </macro>
   <macro name="container-title">
     <group delimiter=" ">

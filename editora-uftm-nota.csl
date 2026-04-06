@@ -126,8 +126,8 @@
       </if>
     </choose>
   </macro>
-  <macro name="recipient-note">
-    <names variable="recipient" delimiter=", ">
+  <macro name="recipient-interviewer">
+    <names variable="recipient interviewer" delimiter=", ">
       <label form="verb" text-case="lowercase" suffix=" " />
       <name and="text" delimiter=", " />
     </names>

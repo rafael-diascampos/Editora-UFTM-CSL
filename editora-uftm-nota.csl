@@ -231,12 +231,6 @@
       </substitute>
     </names>
   </macro>
-  <macro name="interviewer-note">
-    <names variable="interviewer" delimiter=", ">
-      <label form="verb" text-case="lowercase" suffix=" " />
-      <name and="text" delimiter=", " />
-    </names>
-  </macro>
   <macro name="interviewer">
     <names variable="interviewer" delimiter=", ">
       <label form="verb" text-case="capitalize-first" suffix=" " />
@@ -481,17 +475,6 @@
         </else>
       </choose>
     </group>
-  </macro>
-  <macro name="reprint-note">
-    <choose>
-      <if variable="original-date issued" match="all">
-        <choose>
-          <if variable="original-publisher original-publisher-place" match="none">
-            <text value="repr." />
-          </if>
-        </choose>
-      </if>
-    </choose>
   </macro>
   <macro name="reprint">
     <choose>

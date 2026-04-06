@@ -1092,17 +1092,9 @@
         </else-if>
         <else-if type="paper-conference">
           <group delimiter=". ">
-            <names variable="author">
-              <choose>
-                <if has-given-name="false">
-                  <name />
-                </if>
-                <else>
-                  <name name-as-sort-order="all" />
-                </else>
-              </choose>
-              <et-al font-style="italic" />
-            </names>
+            <group>
+              <text macro="bibliography-name" />
+            </group>
             <group delimiter=", ">
               <text variable="title" />
             </group>

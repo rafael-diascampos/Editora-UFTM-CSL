@@ -474,7 +474,7 @@
   </macro>
   <macro name="edition">
     <choose>
-      <if type="book chapter graphic motion_picture paper-conference report song" match="any">
+      <if variable="edition">
         <choose>
           <if is-numeric="edition">
             <group delimiter=" ">
@@ -1124,10 +1124,7 @@
               <text variable="title" font-style="italic" />
               <choose>
                 <if variable="edition">
-                  <group delimiter=" ">
-                    <number variable="edition" />
-                    <text term="edition" form="short" />
-                  </group>
+                  <text macro="edition" />
                 </if>
               </choose>
             </group>

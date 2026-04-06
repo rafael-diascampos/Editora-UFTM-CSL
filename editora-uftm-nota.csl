@@ -434,9 +434,6 @@
       </else-if>
     </choose>
   </macro>
-  <macro name="event-note">
-    <text variable="event" />
-  </macro>
   <macro name="event">
     <choose>
       <if variable="title">
@@ -958,6 +955,9 @@
             <group delimiter=" ">
               <text term="in" text-case="capitalize-first" />
               <text variable="event-title" font-style="italic" />
+            </group>
+            <group>
+              <text macro="event" />
             </group>
             <group delimiter=", ">
               <group delimiter=", ">

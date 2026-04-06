@@ -202,12 +202,6 @@
       <text macro="recipient" />
     </group>
   </macro>
-  <macro name="recipient-short">
-    <names variable="recipient">
-      <label form="verb" text-case="lowercase" suffix=" " />
-      <name form="short" and="text" delimiter=", " />
-    </names>
-  </macro>
   <macro name="contributors-short">
     <group delimiter=" ">
       <names variable="author">
@@ -229,12 +223,6 @@
         <names variable="translator" />
         <text macro="title" />
       </substitute>
-    </names>
-  </macro>
-  <macro name="interviewer">
-    <names variable="interviewer" delimiter=", ">
-      <label form="verb" text-case="capitalize-first" suffix=" " />
-      <name and="text" delimiter=", " />
     </names>
   </macro>
   <macro name="title">

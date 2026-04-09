@@ -17,7 +17,7 @@
     <category field="social_science" />
     <category field="humanities" />
     <summary>Estilo criado para facilitar a adequação de trabalhos encaminhados para Editora UFTM.</summary>
-    <updated>2025-07-12T18:34:45+00:00</updated>
+    <updated>2026-04-06T18:34:45+00:00</updated>
     <rights license="https://creativecommons.org/licenses/by-nc-sa/4.0" />
   </info>
   <locale xml:lang="pt-BR">
@@ -153,7 +153,7 @@
             <if variable="genre">
               <text variable="genre" text-case="capitalize-first" />
             </if>
-            <else>
+            <else-if>
               <text term="letter" text-case="capitalize-first" />
             </else>
           </choose>

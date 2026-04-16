@@ -42,7 +42,7 @@
       <term name="edition" form="short">ed.</term>
       <term name="page" form="short">
         <single>p.</single>
-        <multiple>pp.</multiple>
+        <multiple>p.</multiple>
       </term>
       <term name="circa" form="short">ca.</term>
       <term name="and">e</term>
@@ -155,6 +155,9 @@
             </if>
             <else-if>
               <text term="letter" text-case="capitalize-first" />
+            </else-if>
+            <else>
+              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             </else>
           </choose>
         </if>

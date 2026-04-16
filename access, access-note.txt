@@ -1,0 +1,74 @@
+access, access-note
+collection-title, container-contributors, container-contributors-note
+container-title, container-title-note
+contributors, contributors-note, contributors-short, contributors-sort
+data-ano-completo, date-disambiguate
+description, description-note
+issue-join-with-comma, issue-join-with-period, issue-join-with-space
+issue-map-graphic, issue-note-join-with-comma, issue-note-join-with-space
+locators-chapter
+locators-join-with-comma, locators-join-with-period, locators-join-with-space
+locators-journal-join-with-colon, locators-journal-join-with-comma
+locators-newspaper, locators-note-join-with-comma, locators-note-join-with-space
+secondary-contributors, secondary-contributors-note
+title-note
+titulo-container
+
+
+
+
+10. title-short ⭐
+Onde é usada: Linhas 1333 (citation apenas) + algumas referências em nota
+O que faz: Título curto em itálico
+
+Usado na citation inline
+Se não tem título curto, usa container-title
+11. edition
+Onde é usada: Linhas 671, 684 (livros)
+O que faz: Formata número da edição (1ª edição, 2ª edição, etc.)
+
+12. edition-note
+Onde é usada: Linha 554 (artigos em coletâneas)
+O que faz: Edição em formato de nota
+
+13. editor + editor-translator
+Onde é usada: Linhas 220, 85, 92
+O que faz: Formata editor e tradutor com rótulos
+
+14. issued
+Onde é usada: Linhas 345, 980, 989 (datas em geral)
+O que faz: Mostra data completa (dia, mês, ano) para artigos de jornal
+
+15. publisher + reprint + reprint-note**
+Onde é usada: Linhas 1024, 1121, 1023
+O que faz: Formatam informações de editor/reimpressão
+
+16. event + event-note**
+Onde é usada: Linhas 1102, 1019 (conferências)
+O que faz: Formatam informações de evento
+
+17. interviewer + interviewer-note**
+Onde é usada: Linhas 379, 351 (entrevistas)
+O que faz: Formatam informações de entrevistador
+
+18. recipient + recipient-note** + recipient-short**
+Onde é usada: Linhas 229, 159, 189, 247
+O que faz: Formatam informações de destinatário (para correspondências/cartas)
+
+19. originally-published
+Onde é usada: Linhas 1021, 1119 (reimpressões/reedições)
+O que faz: Mostra informação de publicação original
+
+20. legal-cites
+Onde é usada: Linhas 550, 667 (documentos jurídicos)
+O que faz: Formata citações jurídicas
+
+21. contributors-citation ⭐
+Onde é usada: Linha 1332 (citation inline apenas)
+O que faz: Nomes completos com "&" e et-al itálico
+
+22. point-locator-inline ⭐
+Onde é usada: Linha 1335 (citation inline apenas)
+O que faz: Página/seção específica citada (se houver)
+
+Resumo: Das 35 macros, 22 estão ativas na bibliography. A maioria é para formatar diferentes tipos de documentos e campos específicos.

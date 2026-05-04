@@ -50,3 +50,7 @@ These styles are licensed under the [Creative Commons Attribution-NonCommercial-
 
 [![Developed by Rafael Dias Campos](https://img.shields.io/badge/Developed%20by-Rafael%20Dias%20Campos-A71930?style=for-the-badge&labelColor=000000&logoColor=white)](https://editora.uftm.edu.br)[![as a personal contribution to](https://img.shields.io/badge/as%20a%20personal%20contribution%20to-ffffff?style=for-the-badge&labelColor=ffffff&color=ffffff&logoColor=000000)](https://editora.uftm.edu.br)[![Editora UFTM](https://img.shields.io/badge/Editora%20UFTM-A71930?style=for-the-badge&labelColor=000000&logoColor=white)](https://editora.uftm.edu.br)
 
+
+## Repository Registration
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20030760.svg)](https://doi.org/10.5281/zenodo.20030760)
+

@@ -52,5 +52,5 @@ These styles are licensed under the [Creative Commons Attribution-NonCommercial-
 
 
 ## Repository Registration
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20030760.svg)](https://doi.org/10.5281/zenodo.20030760)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20030760-1D79B7?style=flat&labelColor=555555)](https://doi.org/10.5281/zenodo.20030760)
 
